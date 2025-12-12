@@ -15,10 +15,14 @@ print(".json() method:")
 print(response.content)
 """
 
-data = response.json()
-print("Available endpoints:")
-print(json.dumps(data, indent=2))
+# data = response.json()
+# print("Available endpoints:")
+# print(json.dumps(data, indent=2))
 
-for key in data.keys():
-    print(key)
+# for key in data.keys():
+#     print(key)
     
+response = requests.get(" https://github.com/swar/nba_api", timeout=10)
+
+print(f"Status Code: {response.status_code}")
+
